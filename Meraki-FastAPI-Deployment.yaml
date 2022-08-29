@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    io.kompose.service: netcloud-fastapi
+  name: netcloud-fastapi
+  namespace: default
+spec:
+  selector:
+    matchLabels:
+      io.kompose.service: netcloud-fastapi
+  template:
+    metadata:
+      labels:
+        io.kompose.service: netcloud-fastapi
+    spec:
+      containers:
+        - env:
+            - name: JWT_PATH
+              value: /var/run/secrets/kubernetes.io/serviceaccount/token
+            - name: VAULT_ADDR
+              value: http://vault.vault:8200
+          image: registry.quokka.ninja/ccfs/netcloud-fastapi/netcloud-fastapi:latest
+          imagePullPolicy: Always
+          name: netcloud-fastapi
+          ports:
+            - containerPort: 80
+              protocol: TCP
+      imagePullSecrets:
+        - name: gitlab-cr
+      restartPolicy: Always
+      serviceAccountName: vault

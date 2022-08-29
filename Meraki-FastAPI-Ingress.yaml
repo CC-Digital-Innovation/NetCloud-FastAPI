@@ -1,0 +1,21 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: netcloud-fastapi
+  annotations:
+    traefik.ingress.kubernetes.io/redirect-entry-point: https
+    traefik.ingress.kubernetes.io/redirect-permanent: "true"
+    traefik.ingress.kubernetes.io/rewrite-target: /
+spec:
+  ingressClassName: traefik
+  rules:
+    - host: k3s.quokka.ninja
+      http:
+        paths:
+          - path: /netcloud-fastapi
+            pathType: Prefix
+            backend:
+              service:
+                name: netcloud-fastapi
+                port:
+                  number: 80
