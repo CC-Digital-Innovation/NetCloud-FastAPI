@@ -1,5 +1,6 @@
 from fastapi import FastAPI, Header, Response
 
+import cisco_support_api
 
 # API instance variable.
 NETCLOUD_API_INST = FastAPI()
@@ -265,3 +266,7 @@ def routers(response: Response,
                     "previous": None
                 }
         }
+
+@NETCLOUD_API_INST.get('/sn2info/v2/coverage/summary/serial_numbers/{serial_numbers}')
+def get_coverage_summary_by_serial_numbers(serial_numbers: str):
+    return cisco_support_api.SAMPLE_RESPONSE
