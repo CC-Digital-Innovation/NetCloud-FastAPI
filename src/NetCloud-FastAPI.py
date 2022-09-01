@@ -194,7 +194,7 @@ def routers(response: Response,
                         "previous": None
                     }
             }
-    elif name == 'Offline_site':
+    elif name == 'Cali Center':
         # Return the offline dummy object.
         return \
             {
