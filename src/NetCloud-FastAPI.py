@@ -1,5 +1,6 @@
 from fastapi import FastAPI, Header, Response
 
+import cisco_support_api
 
 # Module information.
 __author__ = 'Anthony Farina'
@@ -216,7 +217,7 @@ def routers(response: Response,
                         "previous": None
                     }
             }
-    elif name == 'Offline_site':
+    elif name == 'Cali Center':
         # Return the offline dummy object.
         return \
             {
@@ -292,3 +293,7 @@ def routers(response: Response,
                     "previous": None
                 }
         }
+
+@NETCLOUD_API_INST.get('/sn2info/v2/coverage/summary/serial_numbers/{serial_numbers}')
+def get_coverage_summary_by_serial_numbers(serial_numbers: str):
+    return cisco_support_api.SAMPLE_RESPONSE
