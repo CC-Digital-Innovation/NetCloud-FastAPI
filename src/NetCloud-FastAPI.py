@@ -1,6 +1,17 @@
 from fastapi import FastAPI, Header, Response
 
 
+# Module information.
+__author__ = 'Anthony Farina'
+__copyright__ = 'Copyright (C) 2022 Computacenter Digital Innovation'
+__credits__ = ['Anthony Farina']
+__maintainer__ = 'Anthony Farina'
+__email__ = 'farinaanthony96@gmail.com'
+__license__ = 'MIT'
+__version__ = '1.0.1'
+__status__ = 'Released'
+
+
 # API instance variable.
 NETCLOUD_API_INST = FastAPI()
 
@@ -66,7 +77,9 @@ def routers(response: Response,
                             "https://www.cradlepointecm.com/api/v2/routers"
                             "/0000000"
                             "/overlay_network_binding/",
-                        "product": "https://www.cradlepointecm.com/api/v2/products/41/",
+                        "product":
+                            "https://www.cradlepointecm.com/api/v2/"
+                            "products/41/",
                         "reboot_required": False,
                         "resource_url":
                             "https://www.cradlepointecm.com/api/v2/routers"
@@ -74,7 +87,9 @@ def routers(response: Response,
                         "serial_number": "MM000000000000",
                         "state": "offline",
                         "state_updated_at": "2020-04-27T07:53:45.995018+00:00",
-                        "target_firmware": "https://www.cradlepointecm.com/api/v2/firmwares/4543/",
+                        "target_firmware":
+                            "https://www.cradlepointecm.com/api/v2/"
+                            "firmwares/4543/",
                         "updated_at": "2022-03-12T04:36:15.440665+00:00",
                         "upgrade_pending": True
                     },
@@ -112,7 +127,9 @@ def routers(response: Response,
                             "https://www.cradlepointecm.com/api/v2/routers"
                             "/0000000"
                             "/overlay_network_binding/",
-                        "product": "https://www.cradlepointecm.com/api/v2/products/41/",
+                        "product":
+                            "https://www.cradlepointecm.com/api/v2/"
+                            "products/41/",
                         "reboot_required": False,
                         "resource_url":
                             "https://www.cradlepointecm.com/api/v2/routers"
@@ -120,7 +137,9 @@ def routers(response: Response,
                         "serial_number": "MM000000000000",
                         "state": "online",
                         "state_updated_at": "2020-04-27T07:53:45.995018+00:00",
-                        "target_firmware": "https://www.cradlepointecm.com/api/v2/firmwares/4543/",
+                        "target_firmware":
+                            "https://www.cradlepointecm.com/api/v2/"
+                            "firmwares/4543/",
                         "updated_at": "2022-03-12T04:36:15.440665+00:00",
                         "upgrade_pending": True
                     }
@@ -172,7 +191,9 @@ def routers(response: Response,
                             "https://www.cradlepointecm.com/api/v2/routers"
                             "/0000000"
                             "/overlay_network_binding/",
-                        "product": "https://www.cradlepointecm.com/api/v2/products/41/",
+                        "product":
+                            "https://www.cradlepointecm.com/api/v2/"
+                            "products/41/",
                         "reboot_required": False,
                         "resource_url":
                             "https://www.cradlepointecm.com/api/v2/routers"
@@ -180,7 +201,9 @@ def routers(response: Response,
                         "serial_number": "MM000000000000",
                         "state": "online",
                         "state_updated_at": "2020-04-27T07:53:45.995018+00:00",
-                        "target_firmware": "https://www.cradlepointecm.com/api/v2/firmwares/4543/",
+                        "target_firmware":
+                            "https://www.cradlepointecm.com/api/v2/"
+                            "firmwares/4543/",
                         "updated_at": "2022-03-12T04:36:15.440665+00:00",
                         "upgrade_pending": True
                     }
@@ -232,7 +255,9 @@ def routers(response: Response,
                             "https://www.cradlepointecm.com/api/v2/routers"
                             "/0000000"
                             "/overlay_network_binding/",
-                        "product": "https://www.cradlepointecm.com/api/v2/products/41/",
+                        "product":
+                            "https://www.cradlepointecm.com/api/v2/"
+                            "products/41/",
                         "reboot_required": False,
                         "resource_url":
                             "https://www.cradlepointecm.com/api/v2/routers"
@@ -240,7 +265,9 @@ def routers(response: Response,
                         "serial_number": "MM000000000000",
                         "state": "offline",
                         "state_updated_at": "2020-04-27T07:53:45.995018+00:00",
-                        "target_firmware": "https://www.cradlepointecm.com/api/v2/firmwares/4543/",
+                        "target_firmware":
+                            "https://www.cradlepointecm.com/api/v2/"
+                            "firmwares/4543/",
                         "updated_at": "2022-03-12T04:36:15.440665+00:00",
                         "upgrade_pending": True
                     }
